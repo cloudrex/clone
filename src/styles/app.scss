@@ -1,0 +1,60 @@
+.app {
+    & {
+        background-color: #222;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        justify-content: stretch;
+        align-items: stretch;
+        height: 100%;
+    }
+
+    > .content {
+        & {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            padding: 15px;
+        }
+
+        > .label {
+            & {
+                display: flex;
+            }
+
+            > .title {
+                margin-right: 4px;
+            }
+
+            > .content {
+                & {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                > .name {
+                    color: #ddd;
+                }
+
+                > .size {
+                    & {
+                        color: #aaa;
+                    }
+
+                    &::before {
+                        content: "(";
+                    }
+
+                    &::after {
+                        content: ")";
+                    }
+                }
+
+                > div:not(:last-child) {
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+}

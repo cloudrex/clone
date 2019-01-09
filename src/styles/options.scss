@@ -1,0 +1,35 @@
+.options {
+    & {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    > .option {
+        & {
+            background: none;
+            color: #aaa;
+            border: 1px solid #111;
+            padding: 8px 20px;
+            font-size: 15px;
+            transition: background-color 0.1s ease, color 0.1s ease;
+            cursor: pointer;
+        }
+
+        &:hover {
+            background-color: #181818;
+            color: #fff;
+        }
+
+        &.yellow {
+            &:hover {
+                background-color: #f1c40f;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+    }
+}

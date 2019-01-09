@@ -1,0 +1,40 @@
+.bar {
+    & {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        border-radius: 2px;
+        border: 1px solid #111;
+        background-color: #111;
+        height: 30px;
+        transition: filter 0.2s ease;
+        margin: 10px 0;
+    }
+
+    > div {
+        height: 100%;
+    }
+
+    > .fluid {
+        width: 50%;
+        background: linear-gradient(to right, #3498db, #31adff);
+    }
+
+    > .ghost {
+        width: 25%;
+        background: linear-gradient(to right, #34495e, #436281);
+        opacity: 0.45;
+    }
+
+    > .counter {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translate(0, -40%);
+        cursor: default;
+        color: #fff;
+        font-weight: bold;
+    }
+}
